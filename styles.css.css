@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #ecf2f8;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+/*BELOW THIS IS THE DESIGN FOR THE MOBILE VERSION*/
+
+#testimonial-grid-container {
+    padding: 5% 3%;
+}
+
+.grid-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: -10px 10px 16px -7px rgba(0,0,0,0.3);
+    -webkit-box-shadow: -10px 10px 16px -7px rgba(0,0,0,0.3);
+    -moz-box-shadow: -10px 10px 16px -7px rgba(0,0,0,0.3);
+    font-size: 13px;
+}
+
+.grid-item .header-txt p:nth-of-type(2),
+.grid-item > p:nth-of-type(1) {
+    opacity: 70%;
+}
+
+.grid-item .header-txt p:nth-of-type(1) {
+    font-size: 1rem
+}
+
+#testimonial-1 {
+    background-color: #7541c8;
+    color: #ffffff;
+    position: relative;
+    z-index: 0;
+}
+
+#testimonial-2 {
+    background-color: #48556a;
+    color: #ffffff;
+}
+
+#testimonial-3, #testimonial-5 {
+    background-color: #ffffff;
+    color: #48556a
+}
+
+#testimonial-4 {
+    background-color: #19212e;
+    color: #ffffff;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    z-index: 3;
+    position: relative;
+}
+
+.header img {
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #7541c8
+}
+
+
+.grid-item h4 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#quote {
+    position: absolute;
+    right: 15%;
+    top: 0;
+    z-index: 1;
+    overflow: visible
+}
+/*BELOW THIS IS THE DESIGN FOR THE DESKTOP VERSION*/
+
+@media (min-width: 576px) {
+    #testimonial-grid-container, 
+    #main-left, 
+    #top, 
+    #bottom {
+        display: flex;
+    }
+
+    #testimonial-grid-container {
+        max-width: 900px;
+        margin: 0 auto;
+        max-width: 1440px
+    }
+
+    #main-left {
+        flex-direction: column;
+        flex-basis: 80%;
+    }
+
+    #main-left .grid-item {
+        margin-right: 15px;
+    }
+
+    #top, #bottom {
+        flex-basis: 50%;
+    }
+
+
+    #testimonial-1, #testimonial-4 {
+        flex-basis: 65%;
+    }
+
+    #testimonial-2, #testimonial-3 {
+        flex-basis: 35%;
+    }
+
+    #testimonial-5 {
+        flex-basis: 20%;
+    }
+}
